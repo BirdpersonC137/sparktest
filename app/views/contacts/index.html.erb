@@ -1,9 +1,15 @@
+<h1>Contact List</h1>
+<div class="stats"><h3>All valid contacts: </h3><h3 class="statnum"> <%= @contacts.length %></h3></div>
+<div class="stats"><h3>Invalid contacts(missing values): </h3><h3 class="statnum"> <%= @invalidcontacts.length %></h3></div>
+<div class="stats"><h3>Unique contacts:</h3><h3 class="statnum"> <%= @uniquecontacts.length%></h3></div>
+<div class="stats"><h3>Total entries: </h3><h3 class="statnum"> <%= @allcontacts.length %></h3></div>
+<div class="stats"><h3>Total duplicates: </h3><h3 class="statnum"> <%= @duplicates.length %></h3></div>
 <table>
-<thead>
+<thead class="tbl-header">
     <tr>
         <th>First Name</th>
         <th>Last Name</th>
-        <th>E-Mail</th>
+        <th id="email">E-Mail</th>
         <th>Phone</th>
         <th>Address</th>
         <th>Province/State</th>
@@ -19,7 +25,7 @@
     <tr>
         <td><%= contact.first_name %></td>
         <td><%= contact.last_name %></td>
-        <td><%= contact.email %></td>
+        <td id="email"><%= contact.email %></td>
         <td><%= contact.phone %></td>
         <td><%= contact.address_line_1 %></td>
         <td><%= contact.province %></td>
@@ -32,8 +38,3 @@
     </tr>
 <% end %>
 </table>
-All valid contacts<%= @contacts.length %>
-Invalid contacts(missing values): <%= @invalidcontacts.length %>
-Unique contacts: <%= @uniquecontacts.length%>
-Total entries: <%= @allcontacts.length %>
-Total duplicates: <%= @duplicates.length %>
