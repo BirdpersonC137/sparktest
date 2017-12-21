@@ -67,3 +67,14 @@ margin: 50px;
  .statnum{
      margin-left: 10px;
  }
+ .top{
+     display: flex;
+     justify-content: space-between;
+ }
+ .import{
+     padding-top:100px;
+     padding-right: 100px;
+ }
+ .statistics{
+     padding-left:50px;
+ }

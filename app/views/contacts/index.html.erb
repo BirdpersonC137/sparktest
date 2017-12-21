@@ -1,9 +1,20 @@
 <h1>Contact List</h1>
+<div class = "top">
+<div class="statistics">
 <div class="stats"><h3>All valid contacts: </h3><h3 class="statnum"> <%= @contacts.length %></h3></div>
 <div class="stats"><h3>Invalid contacts(missing values): </h3><h3 class="statnum"> <%= @invalidcontacts.length %></h3></div>
 <div class="stats"><h3>Unique contacts:</h3><h3 class="statnum"> <%= @uniquecontacts.length%></h3></div>
 <div class="stats"><h3>Total entries: </h3><h3 class="statnum"> <%= @allcontacts.length %></h3></div>
 <div class="stats"><h3>Total duplicates: </h3><h3 class="statnum"> <%= @duplicates.length %></h3></div>
+</div>
+<div class="import">
+<h2 class="stats">Import Contacts</h2>
+<%= form_tag import_contacts_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+</div>
+</div>
 <table>
 <thead class="tbl-header">
     <tr>
@@ -38,3 +49,5 @@
     </tr>
 <% end %>
 </table>
+
+

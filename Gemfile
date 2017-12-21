@@ -47,6 +47,8 @@ group :development do
   gem 'pry-rails' #a gem that integrates pry with rails seemlessly
   gem 'hirb'
 end
-
+gem 'iconv'
+gem 'roo'
+gem 'roo-xls'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
