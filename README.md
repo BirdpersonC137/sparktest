@@ -1,24 +1,11 @@
-# README
+# Contact List
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version: 2.4.1
 
-Things you may want to cover:
+* Database creation: rake db:create
 
-* Ruby version
+* Database initialization: rake db:migrate
 
-* System dependencies
+* Uploads: Both via seed file and via front page
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* CSS - custom with some inspiration from code-pen
