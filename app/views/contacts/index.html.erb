@@ -1,14 +1,39 @@
+<table>
+<thead>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>E-Mail</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Province/State</th>
+        <th>Country</th>
+        <th>Postal Code/Zip Code</th>
+        <th>Date Added</th>
+        <th>Found through</th>
+        <th>Budget</th>
+        <th>Favorite Color</th>
+    </tr>
+</thead>
 <% @uniquecontacts.each do |contact| %>
-    <hr>
-    <%= contact.first_name %>
-    <%= contact.last_name %>
-    <%= contact.email %>
-    <%= contact.what_is_your_favourite_color %>
-    <hr>
+    <tr>
+        <td><%= contact.first_name %></td>
+        <td><%= contact.last_name %></td>
+        <td><%= contact.email %></td>
+        <td><%= contact.phone %></td>
+        <td><%= contact.address_line_1 %></td>
+        <td><%= contact.province %></td>
+        <td><%= contact.country_name %></td>
+        <td><%= contact.postcode %></td>
+        <td><%= (contact.date_added).strftime("%B %d, %Y") %></td>
+        <td><%= contact.how_did_you_hear_about_us %></td>
+        <td><%= contact.what_is_your_budget %></td>
+        <td><%= contact.what_is_your_favourite_color %></td>
+    </tr>
 <% end %>
-
-<%= @invalidcontacts.length %>
-<%= @contacts.length %>
-<%= @uniquecontacts.length%>
-<%= @allcontacts.length %>
-<%= @duplicates.length %>
+</table>
+All valid contacts<%= @contacts.length %>
+Invalid contacts(missing values): <%= @invalidcontacts.length %>
+Unique contacts: <%= @uniquecontacts.length%>
+Total entries: <%= @allcontacts.length %>
+Total duplicates: <%= @duplicates.length %>

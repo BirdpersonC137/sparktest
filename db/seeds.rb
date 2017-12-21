@@ -10,7 +10,6 @@ require "csv"
 Contact.destroy_all
 
 CSV.foreach(Rails.root.join('contacts.csv'), headers: true) do |row|
-  p row
   Contact.create! do |contact|
   contact.first_name = row[0]
   contact.last_name = row[1]
@@ -25,6 +24,8 @@ CSV.foreach(Rails.root.join('contacts.csv'), headers: true) do |row|
   contact.how_did_you_hear_about_us = row[10]
   contact.what_is_your_budget = row[11]
   contact.what_is_your_favourite_color = row[12]
-  puts "#{contact.first_name}, #{contact.last_name} saved"
   end
 end
+contacts = Contact.all
+
+puts "#{contacts.count} contacts were were created"
