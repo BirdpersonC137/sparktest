@@ -1,0 +1,14 @@
+<% @uniquecontacts.each do |contact| %>
+    <hr>
+    <%= contact.first_name %>
+    <%= contact.last_name %>
+    <%= contact.email %>
+    <%= contact.what_is_your_favourite_color %>
+    <hr>
+<% end %>
+
+<%= @invalidcontacts.length %>
+<%= @contacts.length %>
+<%= @uniquecontacts.length%>
+<%= @allcontacts.length %>
+<%= @duplicates.length %>
